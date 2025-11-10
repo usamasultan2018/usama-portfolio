@@ -4,7 +4,6 @@ import React from "react";
 import { easeOut, motion } from "framer-motion";
 import {
   Download,
-  ExternalLink,
   Mail,
   Phone,
   MapPin,
@@ -53,10 +52,13 @@ const ResumePage = () => {
               Resume
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
-            <Button className="group">
-              <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
-              Download PDF
+            <Button asChild className="group">
+              <a href="/UsamaSultanCv.pdf" download>
+                <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+                Download PDF
+              </a>
             </Button>
+
           </motion.div>
 
           {/* Resume Content */}
@@ -68,7 +70,7 @@ const ResumePage = () => {
             <div className="mb-12">
               <div className="text-center mb-8">
                 <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
-                  Abdul Wahab
+                  Usama Sultan
                 </h1>
                 <h2 className="text-xl text-blue-600 dark:text-blue-400 font-medium mb-6">
                   Software Engineer | Flutter Developer
@@ -77,11 +79,11 @@ const ResumePage = () => {
                 <div className="flex flex-wrap justify-center gap-6 text-gray-600 dark:text-gray-300">
                   <div className="flex items-center gap-2">
                     <Mail className="w-4 h-4" />
-                    <span>iabdulwahab.edu@gmail.com</span>
+                    <span>usama.khan2018@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Phone className="w-4 h-4" />
-                    <span>+923009016446</span>
+                    <span>+92-334-9158650</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="w-4 h-4" />
@@ -96,10 +98,12 @@ const ResumePage = () => {
                   Professional Summary
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Seasoned Software Engineer with 2+ years of experience in
-                  cross-platform development (Flutter, web apps, AI).
-                  Passionate about building scalable, elegant applications for
-                  mobile, and web. Adept in Clean Architecture, Firebase, and AI APIs like OpenAI.
+                  Flutter Developer with 2+ years of experience building
+                  production-ready cross-platform mobile applications for iOS,
+                  Android, and Web. Specialized in state management, Firebase
+                  integration, and full-stack development with Node.js.
+                  Proven track record of delivering scalable applications with
+                  clean architecture and optimized performance.
                 </p>
               </div>
             </div>
@@ -166,53 +170,24 @@ const ResumePage = () => {
                 </h2>
               </div>
               <div className="space-y-6">
-                {/* Bachelor Degree */}
+                {/* Bachelor Degree ONLY (CGPA 2.7 / 4.0) */}
                 <div className="border-l-2 border-blue-200 dark:border-blue-800 pl-6 relative">
                   <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
                   <h3 className="text-lg font-bold text-gray-900 dark:text-white">
                     Bachelors of Science (Software Engineering)
                   </h3>
                   <p className="text-blue-600 dark:text-blue-400 font-medium">
-                    City University of Science and Information Technology Peshawar, Pakistan
+                    City University of Science and Information Technology, Peshawar, Pakistan
                   </p>
                   <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
                     <span>2019 - 2023</span>
                     <span className="mx-2">•</span>
                     <Award className="w-4 h-4 mr-1" />
-                    <span>CGPA: 3.31 / 4</span>
-                  </div>
-                </div>
-                {/* FSC */}
-                <div className="border-l-2 border-blue-200 dark:border-blue-800 pl-6 relative">
-                  <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                    FSc (Computer Science)
-                  </h3>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium">
-                    Capital Institute of IT and Management Sciences, Peshawar, Pakistan
-                  </p>
-                  <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
-                    <span>2017 - 2019</span>
-                    {/* Add Award or other info here if needed */}
-                  </div>
-                </div>
-                {/* DIT */}
-                <div className="border-l-2 border-blue-200 dark:border-blue-800 pl-6 relative">
-                  <div className="absolute -left-2 top-0 w-4 h-4 bg-blue-600 rounded-full"></div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-                    Diploma in Information Technology (DIT)
-                  </h3>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium">
-                    Khyber Pakhtunkhwa Board of Technical and Commerce Education, Peshawar, Pakistan
-                  </p>
-                  <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
-                    <span>2017 - 2018</span>
-                    {/* Add Award or other info here if needed */}
+                    <span>CGPA: 2.7 / 4.0</span>
                   </div>
                 </div>
               </div>
             </div>
-
 
             {/* Skills */}
             <div className="mb-12">
@@ -234,7 +209,7 @@ const ResumePage = () => {
                         >
                           {skill}
                         </span>
-                      ),
+                      )
                     )}
                   </div>
                 </div>
@@ -244,17 +219,16 @@ const ResumePage = () => {
                     Technologies & Tools
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {[
-                      ...skills.services.slice(0, 3),
-                      ...skills.tools.slice(0, 3),
-                    ].map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                    {[...skills.services.slice(0, 3), ...skills.tools.slice(0, 3)].map(
+                      (skill) => (
+                        <span
+                          key={skill}
+                          className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm"
+                        >
+                          {skill}
+                        </span>
+                      )
+                    )}
                   </div>
                 </div>
               </div>
@@ -307,4 +281,3 @@ const ResumePage = () => {
 };
 
 export default ResumePage;
-

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { easeOut, motion } from 'framer-motion';
-import { ArrowRight, Download, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Download, Mail, MapPin, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -39,12 +39,12 @@ const Hero = () => {
           animate="visible"
           className="text-center"
         >
-          {/* Greeting */}
+          {/* Availability */}
           <motion.div
             variants={itemVariants}
             className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-600 dark:text-blue-400 text-sm font-medium mb-6"
           >
-            <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+            <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse" />
             Available for new opportunities
           </motion.div>
 
@@ -55,7 +55,7 @@ const Hero = () => {
           >
             Hi, I'm{' '}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Abdul Wahab
+              Usama Sultan
             </span>
           </motion.h1>
 
@@ -64,14 +64,8 @@ const Hero = () => {
             variants={itemVariants}
             className="text-xl sm:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-8 max-w-4xl mx-auto"
           >
-            Software Engineer specializing in{' '}
-            <span className="text-blue-600 dark:text-blue-400 font-semibold">
-              Cross-Platform Development
-            </span>{' '}
-            and{' '}
-            <span className="text-purple-600 dark:text-purple-400 font-semibold">
-              AI Integration
-            </span>
+            <span className="text-blue-600 dark:text-blue-400 font-semibold">Flutter Developer</span>
+            {' '}with 2+ years building production-ready cross‑platform apps for iOS, Android & Web.
           </motion.h2>
 
           {/* Description */}
@@ -79,9 +73,8 @@ const Hero = () => {
             variants={itemVariants}
             className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
           >
-            Seasoned Software Engineer with 2+ years of experience building scalable applications 
-            for mobile, and web platforms. Passionate about Clean Architecture, AI APIs, and 
-            creating elegant user experiences.
+            Specialized in state management, Firebase integration, and full‑stack development with Node.js. I deliver
+            scalable applications with Clean Architecture, optimized performance, and elegant user experiences.
           </motion.p>
 
           {/* Location & Contact Info */}
@@ -91,11 +84,27 @@ const Hero = () => {
           >
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5 text-blue-600" />
-              <span>Dubai, United Arab Emirates</span>
+              <span>Peshawar, Pakistan</span>
             </div>
             <div className="flex items-center gap-2">
               <Mail className="w-5 h-5 text-blue-600" />
-              <span>iabdulwahab.edu@gmail.com</span>
+              <a
+                href="mailto:usama.khan2018@gmail.com"
+                className="underline decoration-transparent hover:decoration-inherit hover:text-blue-700 dark:hover:text-blue-300"
+              >
+                usama.khan2018@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <Github className="w-5 h-5 text-blue-600" />
+              <Link
+                href="https://github.com/usamasultan2018"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="underline decoration-transparent hover:decoration-inherit hover:text-blue-700 dark:hover:text-blue-300"
+              >
+                github.com/usamasultan2018
+              </Link>
             </div>
           </motion.div>
 
@@ -104,10 +113,7 @@ const Hero = () => {
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link href="/projects">
                 <Button className="group px-8 py-3 text-lg">
                   View My Work
@@ -116,14 +122,20 @@ const Hero = () => {
               </Link>
             </motion.div>
 
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link href="/resume">
                 <Button className="px-8 py-3 border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-800">
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
+                </Button>
+              </Link>
+            </motion.div>
+
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link href="https://github.com/usamasultan2018" target="_blank" rel="noreferrer noopener">
+                <Button variant="secondary" className="px-8 py-3">
+                  <Github className="mr-2 h-4 w-4" />
+                  GitHub
                 </Button>
               </Link>
             </motion.div>

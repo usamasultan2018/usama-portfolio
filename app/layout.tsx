@@ -7,33 +7,29 @@ import Navigation from '@/components/layout/navigation';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Abdul Wahab - Software Engineer & Flutter Developer',
-  description: 'Seasoned Software Engineer with 2+ years of experience in cross-platform development, AI integration, and scalable architecture. Specializing in Flutter, mobile apps, and AI-powered solutions.',
-  keywords: 'Abdul Wahab, Software Engineer, Flutter Developer, AI Integration, Mobile Development, Cross-platform, Pakistan, Peshawar, Clean Architecture, Scalable Applications',
-  authors: [{ name: 'Abdul Wahab' }],
-  creator: 'Abdul Wahab',
+  title: 'Usama Sultan - Flutter Developer & Software Engineer',
+  description:
+    'Flutter Developer with 2+ years of experience building production-ready cross-platform apps for iOS, Android, and Web. Specialized in state management, Firebase integration, and full-stack with Node.js & MongoDB.',
+  keywords:
+    'Usama Sultan, Flutter Developer, Software Engineer, Cross-platform, Node.js, MongoDB, Firebase, Clean Architecture, Peshawar, Pakistan',
+  authors: [{ name: 'Usama Sultan' }],
+  creator: 'Usama Sultan',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://abdulwahab.dev',
-    siteName: 'Abdul Wahab - Portfolio',
-    title: 'Abdul Wahab - Software Engineer & Flutter Developer',
-    description: 'Seasoned Software Engineer with 2+ years of experience in cross-platform development, AI integration, and scalable architecture.',
+    url: 'https://usamasultan.com',
+    siteName: 'Usama Sultan - Portfolio',
+    title: 'Usama Sultan - Flutter Developer & Software Engineer',
+    description:
+      'Flutter Developer with 2+ years of experience in cross-platform apps, AI integration, and clean architecture.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Abdul Wahab - Software Engineer',
+        alt: 'Usama Sultan - Flutter Developer',
       },
     ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Abdul Wahab - Software Engineer & Flutter Developer',
-    description: 'Seasoned Software Engineer with 2+ years of experience in cross-platform development, AI integration, and scalable architecture.',
-    creator: '@iabdulwahab.edu',
-    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -61,9 +57,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider>
           <Navigation />
-          <main>
-            {children}
-          </main>
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>

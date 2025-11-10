@@ -60,7 +60,7 @@ const FeaturedProjects = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              A showcase of my most impactful projects, from AI-powered applications to 
+              A showcase of my most impactful projects, from AI-powered applications to
               cross-platform solutions serving millions of users worldwide.
             </p>
           </motion.div>

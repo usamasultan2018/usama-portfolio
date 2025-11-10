@@ -1,6 +1,6 @@
 'use client';
 
-import { motion , easeOut} from 'framer-motion';
+import { motion, easeOut } from 'framer-motion';
 import { GraduationCap, Calendar, Award, MapPin } from 'lucide-react';
 
 const Education = () => {
@@ -33,29 +33,16 @@ const Education = () => {
       location: 'Peshawar, Pakistan',
       period: '2019 - 2023',
       status: 'Completed',
-      grade: 'CGPA: 3.31 / 4.00',
-      description: 'Comprehensive Software Engineering program covering software development, system design, and engineering fundamentals.',
+      grade: 'CGPA: 2.70 / 4.00',
+      description:
+        'Comprehensive Software Engineering program covering software development, system design, and engineering fundamentals.',
       highlights: [
         'Software Engineering Principles',
         'System Design & Architecture',
         'Database Management Systems',
-        'Web & Mobile Development'
-      ]
+        'Web & Mobile Development',
+      ],
     },
-
-    {
-      degree: 'FSc (Computer Science)',
-      institution: 'Capital Institute of IT and Management Sciences',
-      location: 'Peshawar, Pakistan',
-      period: '2017 - 2019',
-      status: 'Completed',
-      description: 'Higher Secondary School Certificate with a focus on foundational computer science concepts, mathematics, and general subjects.',
-      highlights: [
-        'Introduction to Programming (C++ Language)',
-        'Computer Fundamentals',
-        'Mathematics and Logic Building',
-      ]
-    }
   ];
 
   return (
@@ -80,7 +67,7 @@ const Education = () => {
 
           {/* Education Cards */}
           <div className="grid lg:grid-cols-2 gap-8">
-            {education.map((edu, index) => (
+            {education.map((edu) => (
               <motion.div
                 key={edu.degree}
                 variants={itemVariants}
@@ -93,11 +80,12 @@ const Education = () => {
                     <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
                       <GraduationCap className="w-7 h-7 text-white" />
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                      edu.status === 'In Progress' 
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-medium ${edu.status === 'In Progress'
                         ? 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300'
                         : 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300'
-                    }`}>
+                        }`}
+                    >
                       {edu.status}
                     </span>
                   </div>
@@ -105,18 +93,18 @@ const Education = () => {
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                     {edu.degree}
                   </h3>
-                  
+
                   <div className="space-y-2 mb-4">
                     <div className="flex items-center text-gray-600 dark:text-gray-300">
                       <GraduationCap className="w-4 h-4 mr-2" />
                       <span className="font-medium">{edu.institution}</span>
                     </div>
-                    
+
                     <div className="flex items-center text-gray-500 dark:text-gray-400">
                       <MapPin className="w-4 h-4 mr-2" />
                       <span>{edu.location}</span>
                     </div>
-                    
+
                     <div className="flex items-center text-gray-500 dark:text-gray-400">
                       <Calendar className="w-4 h-4 mr-2" />
                       <span>{edu.period}</span>

@@ -65,7 +65,10 @@ const About = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8"></div>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              I am a passionate Flutter developer with over 2 years of experience building intuitive, high-performance mobile applications. With a strong foundation in both front-end and back-end development, I specialize in creating responsive, user-focused solutions that align with client goals and exceed expectations. I’m committed to continuous learning and staying current with emerging technologies, enabling me to bring innovation, efficiency, and quality to every project I work on.
+              Flutter Developer with 2+ years of experience building production-ready cross-platform mobile applications
+              for iOS, Android, and Web. Specialized in state management, Firebase integration, and full-stack
+              development with Node.js. Proven track record of delivering scalable applications with clean architecture
+              and optimized performance.
             </p>
           </motion.div>
 
@@ -75,26 +78,39 @@ const About = () => {
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                 My Journey in Software Engineering
               </h3>
-              
+
               <div className="prose prose-lg text-gray-600 dark:text-gray-300">
                 <p>
-                  With over 2 years of experience in mobile application development, I’ve had the opportunity to work on a variety of projects that combine performance, design, and functionality. My journey began with a deep interest in building seamless, user-centric mobile experiences, which led me to specialize in Flutter. Since then, I’ve contributed to scalable mobile apps across different industries, constantly pushing to refine my skills and embrace new technologies. I take pride in developing clean, maintainable code and delivering high-quality solutions that make a real impact.
+                  With over 2 years of experience in mobile application development, I’ve had the opportunity to work on
+                  a variety of projects that combine performance, design, and functionality. My journey began with a deep
+                  interest in building seamless, user-centric mobile experiences, which led me to specialize in Flutter.
+                  Since then, I’ve contributed to scalable mobile apps across different industries, constantly pushing to
+                  refine my skills and embrace new technologies. I take pride in developing clean, maintainable code and
+                  delivering high-quality solutions that make a real impact.
+                </p>
 
-                </p>
-                
                 <p>
-                  At Metasens Technologies, I led the end-to-end development of the LeaseMate mobile application, taking full ownership of the project from architecture to deployment. In addition to managing the development process and coordinating tasks as team lead, I integrated OpenAI's APIs to power intelligent features within the app. This role allowed me to apply clean architecture principles, deliver a scalable and responsive Flutter solution, and incorporate cutting-edge AI to enhance user experience — all within a fast-paced, one-month timeline.
+                  At Metasens Technologies, I led the end-to-end development of the LeaseMate mobile application, taking
+                  full ownership of the project from architecture to deployment. In addition to managing the development
+                  process and coordinating tasks as team lead, I integrated OpenAI's APIs to power intelligent features
+                  within the app. This role allowed me to apply clean architecture principles, deliver a scalable and
+                  responsive Flutter solution, and incorporate cutting-edge AI to enhance user experience — all within a
+                  fast-paced, one-month timeline.
                 </p>
-                
+
                 <p>
-                  Currently deepening my expertise in AI integration within mobile applications, I'm passionate about the intersection of intelligent systems and user-centric design. With a strong foundation in Flutter and full-stack development, I'm driven to explore how emerging technologies like OpenAI can transform everyday apps into smarter, more adaptive solutions — always aiming to push the boundaries of what's possible in mobile development.
+                  Currently deepening my expertise in AI integration within mobile applications, I'm passionate about the
+                  intersection of intelligent systems and user-centric design. With a strong foundation in Flutter and
+                  full-stack development, I'm driven to explore how emerging technologies like OpenAI can transform
+                  everyday apps into smarter, more adaptive solutions — always aiming to push the boundaries of what's
+                  possible in mobile development.
                 </p>
               </div>
             </motion.div>
 
             {/* Right Column - Features */}
             <motion.div variants={itemVariants} className="space-y-6">
-              {features.map((feature, index) => (
+              {features.map((feature) => (
                 <motion.div
                   key={feature.title}
                   variants={itemVariants}
